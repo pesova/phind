@@ -1,25 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
+import Home from './components/Home';
+import About from './components/About';
+import Rents from './components/Rents';
+import { Header } from './components/header/Header';
+import ImageHeader from './components/ImageHeader/ImageHeader';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      fullScreen: '',
+    };
+  }
+
+  setFullscreen(value) {
+    this.setState({...this.state, fullScreen: value})
+  }
+
+  render() {
+    return (
+        <div className='App'>
+          <Router>
+            <div id={this.state.fullScreen ? "fullscreen" : ''}>
+
+              <Header/>
+              <ImageHeader/>
+                          
+              <div>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="about" element={<About />} />
+                  <Route path="rents" element={<Rents />} />
+                </Routes>
+              </div>
+            </div>
+          </Router>
+            
+        </div>
+    );
+  }
+  
 }
 
 export default App;
