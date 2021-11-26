@@ -11,6 +11,8 @@ import About from './components/About';
 import Rents from './components/Rents';
 import { Header } from './components/header/Header';
 import ImageHeader from './components/ImageHeader/ImageHeader';
+import Footer from './components/Footer/Footer';
+import buyProperty from './components/buyProperty';
 
 class App extends React.Component {
   constructor(props) {
@@ -39,8 +41,10 @@ class App extends React.Component {
                   <Route path="/" element={<Home />} />
                   <Route path="about" element={<About />} />
                   <Route path="rents" element={<Rents />} />
+                  <Route path="buy" element={<buyProperty />} />
                 </Routes>
               </div>
+              <Footer/>
             </div>
           </Router>
             

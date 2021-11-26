@@ -1,0 +1,52 @@
+.footer-main {
+  background-color: #fff;
+  padding: 20px 0;
+  border-top: 2px solid #e5e5e5;
+}
+
+.footer-top {
+  margin: auto;
+  padding: 24px;
+  height: auto;
+  overflow: visible;
+  border-bottom: 1px solid #d8d8d8;
+  position: relative;
+  display: block;
+}
+
+.footer-links {
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.footer-links a{
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-social {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer-social a {
+  text-decoration: none;
+}
+
+.footer-bottom {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #888;
+}
+
+.footer-bottom p {
+  padding: 10px;
+  float: right;
+}
+
